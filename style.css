@@ -4,5 +4,6 @@ body {
 }
 
 h1 {
-    color: blue;
+    color: red;
+    margin-bottom: 20px;
 }
