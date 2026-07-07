@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 16px;
+  background: linear-gradient(135deg, #6ea8fe, #a78bfa);
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 20px;
+  color: #33356b;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #d5d9e6;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #6ea8fe;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+#addButton {
+  background: #6ea8fe;
+  color: white;
+  font-weight: bold;
+}
+
+#addButton:hover {
+  background: #4f8dfb;
+}
+
+.filter-area {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.filter-button {
+  flex: 1;
+  background: #f0f2f8;
+  color: #555;
+}
+
+.filter-button:hover {
+  background: #e4e8f5;
+}
+
+.filter-button.is-active {
+  background: #33356b;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafc;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  transition: background-color 0.15s ease;
+}
+
+li:hover {
+  background: #f0f3fa;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #6ea8fe;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  word-break: break-all;
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: #a3a7b7;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 15px;
+  border: 1px solid #6ea8fe;
+  border-radius: 6px;
+}
+
+.icon-button {
+  background: transparent;
+  padding: 4px 6px;
+  font-size: 15px;
+}
+
+.icon-button:hover {
+  background: #e4e8f5;
+}
+
+.delete-button:hover {
+  background: #ffdcdc;
+}
+
+.empty-message {
+  text-align: center;
+  color: #a3a7b7;
+  margin: 18px 0 0;
+}
+
+.footer-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #eceef4;
+  font-size: 13px;
+  color: #777;
+}
+
+.clear-done {
+  background: #ffecec;
+  border: 1px solid #e08a8a;
+  color: #a33;
+}
+
+.clear-done:hover {
+  background: #ffdcdc;
+}

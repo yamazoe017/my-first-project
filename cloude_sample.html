@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDoアプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      background: #f5f7fa;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 8px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background: white;
+      margin-top: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 6px;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>ToDoアプリ</h1>
+
+  <div class="input-area">
+    <input id="taskInput" type="text" placeholder="タスクを入力">
+    <button onclick="addTask()">追加</button>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    function addTask() {
+      const taskText = taskInput.value.trim();
+
+      if (taskText === "") {
+        alert("タスクを入力してください");
+        return;
+      }
+
+      const li = document.createElement("li");
+
+      const span = document.createElement("span");
+      span.textContent = taskText;
+
+      span.addEventListener("click", () => {
+        span.classList.toggle("done");
+      });
+
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "削除";
+
+      deleteButton.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(span);
+      li.appendChild(deleteButton);
+      taskList.appendChild(li);
+
+      taskInput.value = "";
+    }
+  </script>
+</body>
+</html>
